@@ -1,0 +1,19 @@
+{
+  "name": "elapsing-time",
+  "version": "1.0.0",
+  "description": "",
+  "main": "elapsingTime.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArthurKa/elapsing-time.git"
+  },
+  "author": "ArthurKa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArthurKa/elapsing-time/issues"
+  },
+  "homepage": "https://github.com/ArthurKa/elapsing-time#readme"
+}
