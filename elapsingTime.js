@@ -1,11 +1,15 @@
 'use strict';
 
+const round = (n, d) => +n.toFixed(d);
+
 function elapsingTime() {
+  if(!new.target) {
+    throw new Error('elapsing-time cannot be invoked without "new"');
+  }
+
   let time = 0;
   let count = 0;
   let startedTime = 0;
-
-  const round = (num, n) => Math.round(num * 10**n) / 10**n;
 
   this.start = () => {
     startedTime = Date.now();
@@ -21,21 +25,20 @@ function elapsingTime() {
     time = count = startedTime = 0;
   };
 
-  function get(i) {
+  const keys = {
+    s: ms => ms / 1000,
+    ms: ms => ms,
+    us: ms => ms * 1000,
+  };
+  function get(key) {
     const st = startedTime && Date.now() - startedTime;
-    const arr = [
-      () => (time + st) / 1000 / (count || 1),
-      () => (time + st) / (count || 1),
-      () => (time + st) * 1000 / (count || 1),
-    ];
-    return round(arr[i](), 3);
+    const t = (time + st) / (count || 1);
+    return round(keys[key](t), 3);
   }
 
-  Object.defineProperties(this, {
-    s: { get: () => get(0) },
-    ms: { get: () => get(1) },
-    us: { get: () => get(2) },
-  });
+  for(const key of Object.keys(keys)) {
+    Object.defineProperty(this, key, { get: () => get(key) });
+  }
 }
 
 module.exports = elapsingTime;
