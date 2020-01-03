@@ -1,4 +1,4 @@
-Helps you measure the runtime of your code.
+Helps you to measure the runtime of your code.
 
 ## Installation
 `elapsing-time` is available via npm:

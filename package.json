@@ -1,8 +1,13 @@
 {
   "name": "elapsing-time",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Measures the runtime of code.",
   "main": "elapsingTime.js",
+  "keywords": [
+    "time",
+    "time measurement",
+    "elapsed time"
+  ],
   "scripts": {},
   "repository": {
     "type": "git",
