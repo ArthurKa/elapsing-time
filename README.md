@@ -32,6 +32,7 @@ const timer2 = new elapsingTime();
 ### Each value such as *s*, *ms* and *us* has 0.001 precision.
 
 ## Testing
-No testing functionality provided
+No testing functionality provided.
 
+---
 Your improve suggestions and bug reports are welcome any time.
