@@ -10,15 +10,23 @@ function elapsingTime() {
   let time = 0;
   let count = 0;
   let startedTime = 0;
+  let cachedTime = false;
 
   this.start = () => {
+    if(cachedTime) {
+      this.reset();
+      cachedTime = false;
+    }
     startedTime = Date.now();
     count++;
   };
-  this.stop = () => {
+  this.stop = (withReset = false) => {
     if(startedTime) {
       time += Date.now() - startedTime;
       startedTime = 0;
+    }
+    if(withReset) {
+      cachedTime = true;
     }
   };
   this.reset = () => {

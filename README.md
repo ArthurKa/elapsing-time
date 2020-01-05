@@ -29,7 +29,60 @@ const timer2 = new elapsingTime();
   console.log(timer1.us);    // 2020000  // As microseconds
 })();
 ```
-### Each value such as *s*, *ms* and *us* has 0.001 precision.
+
+### Timer reset
+``` js
+const elapsingTime = require('elapsing-time');
+
+const wait = ms => new Promise(res => setTimeout(res, ms));
+const timer = new elapsingTime();
+
+(async () => {
+  timer.start();
+  await wait(100);
+  timer.stop();
+  console.log(timer.ms);
+
+  timer.reset();
+  timer.start();
+  await wait(300);
+  timer.stop();
+  console.log(timer.ms);
+
+  timer.reset();
+  timer.start();
+  await wait(500);
+  timer.stop();
+  console.log(timer.ms);
+})();
+```
+
+### Start with autoreset
+``` js
+const elapsingTime = require('elapsing-time');
+
+const wait = ms => new Promise(res => setTimeout(res, ms));
+const timer = new elapsingTime();
+
+(async () => {
+  timer.start();
+  await wait(100);
+  timer.stop(true);
+  console.log(timer.ms);
+
+  timer.start();
+  await wait(300);
+  timer.stop(true);
+  console.log(timer.ms);
+
+  timer.start();
+  await wait(500);
+  timer.stop(true);
+  console.log(timer.ms);
+})();
+```
+
+### Time counts as integer milliseconds. Each value such as *s*, *ms* and *us* has 0.001 precision.
 
 ## Testing
 No testing functionality provided.
