@@ -101,7 +101,7 @@ const timer = new elapsingTime();
 })();
 ```
 
-### Provided print functions
+### Built in print functions
 ``` js
 const elapsingTime = require('elapsing-time');
 
@@ -113,7 +113,7 @@ const timer = new elapsingTime();
 
   timer.msPrint();  // "Time: 103 ms"
   await wait(10);
-  // There is no timer.stop so it's still counts
+  // There is no timer.stop so it's still counting
   timer.sPrint();  // "Time: 0.116 s"
   await wait(10);
   timer.usPrint();  // "Time: 127000 us"
