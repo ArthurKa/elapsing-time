@@ -38,22 +38,41 @@ const wait = ms => new Promise(res => setTimeout(res, ms));
 const timer = new elapsingTime();
 
 (async () => {
+  // Avarage value
   timer.start();
   await wait(100);
   timer.stop();
-  console.log(timer.ms);
+  console.log(timer.ms);  // 100
+
+  timer.start();
+  await wait(300);
+  timer.stop();
+  console.log(timer.ms);  // 200
+
+  timer.start();
+  await wait(500);
+  timer.stop();
+  console.log(timer.ms);  // 300
+
+
+  // Now with reset
+  timer.reset();
+  timer.start();
+  await wait(100);
+  timer.stop();
+  console.log(timer.ms);  // 100
 
   timer.reset();
   timer.start();
   await wait(300);
   timer.stop();
-  console.log(timer.ms);
+  console.log(timer.ms);  // 300
 
   timer.reset();
   timer.start();
   await wait(500);
   timer.stop();
-  console.log(timer.ms);
+  console.log(timer.ms);  // 500
 })();
 ```
 
@@ -67,18 +86,18 @@ const timer = new elapsingTime();
 (async () => {
   timer.start();
   await wait(100);
-  timer.stop(true);
-  console.log(timer.ms);
+  timer.stop(true);   // Next timer.start will invoke timer.reset
+  console.log(timer.ms);  // 100
 
   timer.start();
   await wait(300);
   timer.stop(true);
-  console.log(timer.ms);
+  console.log(timer.ms);  // 300
 
   timer.start();
   await wait(500);
-  timer.stop(true);
-  console.log(timer.ms);
+  timer.stop();
+  console.log(timer.ms);  // 500
 })();
 ```
 
