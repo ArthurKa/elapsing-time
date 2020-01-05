@@ -46,6 +46,7 @@ function elapsingTime() {
 
   for(const key of Object.keys(keys)) {
     Object.defineProperty(this, key, { get: () => get(key) });
+    this[`${key}Print`] = label => console.info(`${label || 'Time'}: ${this[key]} ${key}`);
   }
 }
 
