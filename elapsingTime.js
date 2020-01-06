@@ -45,13 +45,22 @@ function ElapsingTime() {
   }
 
   for(const key of Object.keys(keys)) {
-    this[`${key}Print`] = label => console.info(`${label || 'Time'}: ${this[key]} ${key}`);
+    Object.defineProperty(this, key, { get: () => get(key), enumerable: true });
   }
 
   this.avg = {};
   for(const key of Object.keys(keys)) {
-    Object.defineProperty(this, key, { get: () => get(key), enumerable: true });
     Object.defineProperty(this.avg, key, { get: () => get(key, true), enumerable: true });
+  }
+
+  function printWrapper(obj, key) {
+    return label => console.info(`${label || 'Time'}: ${obj[key]} ${key}`)
+  }
+  for(const key of Object.keys(keys)) {
+    this[`${key}Print`] = printWrapper(this, key);
+  }
+  for(const key of Object.keys(keys)) {
+    this[`${key}AvgPrint`] = printWrapper(this.avg, key);
   }
 }
 

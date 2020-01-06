@@ -104,22 +104,21 @@ const timer = new ElapsingTime();
 ``` js
 const ElapsingTime = require('elapsing-time');
 
-const wait = ms => new Promise(res => setTimeout(res, ms));
-const timer = new ElapsingTime();
 (async () => {
   timer.start();
   await wait(100);
 
   timer.msPrint();  // Time: 103 ms
   await wait(10);
-  // There is no timer.stop so it's still counting
   timer.sPrint();  // Time: 0.116 s
+  // There is no timer.stop so it's still counting
   await wait(10);
   timer.usPrint();  // Time: 127000 us
   await wait(10);
   timer.msPrint('Custom label');  // Custom label: 142 ms
 })();
 ```
+### The same way "avg" print functions are also present: sAvgPrint, msAvgPrint and usAvgPrint
 
 ### Time counts as integer milliseconds. Each value such as *s*, *ms* and *us* has 0.001 precision.
 
