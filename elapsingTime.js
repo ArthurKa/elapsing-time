@@ -2,7 +2,7 @@
 
 const round = (n, d) => +n.toFixed(d);
 
-function elapsingTime() {
+function ElapsingTime() {
   if(!new.target) {
     throw new Error('elapsing-time cannot be invoked without "new"');
   }
@@ -38,16 +38,21 @@ function elapsingTime() {
     ms: ms => ms,
     us: ms => ms * 1000,
   };
-  function get(key) {
+  function get(key, avg = false) {
     const st = startedTime && Date.now() - startedTime;
-    const t = (time + st) / (count || 1);
+    const t = (time + st) / (avg && count || 1);
     return round(keys[key](t), 3);
   }
 
   for(const key of Object.keys(keys)) {
-    Object.defineProperty(this, key, { get: () => get(key) });
     this[`${key}Print`] = label => console.info(`${label || 'Time'}: ${this[key]} ${key}`);
+  }
+
+  this.avg = {};
+  for(const key of Object.keys(keys)) {
+    Object.defineProperty(this, key, { get: () => get(key), enumerable: true });
+    Object.defineProperty(this.avg, key, { get: () => get(key, true), enumerable: true });
   }
 }
 
-module.exports = elapsingTime;
+module.exports = ElapsingTime;

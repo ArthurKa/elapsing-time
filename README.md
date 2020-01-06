@@ -1,3 +1,5 @@
+# elapsing-time
+
 Helps you to measure the runtime of your code.
 
 ## Installation
@@ -8,51 +10,48 @@ $ npm i elapsing-time
 
 ## Usage
 ``` js
-const elapsingTime = require('elapsing-time');
+const ElapsingTime = require('elapsing-time');
 
 const wait = ms => new Promise(res => setTimeout(res, ms));
-const timer1 = new elapsingTime();
-const timer2 = new elapsingTime();
+const timer = new ElapsingTime();
 
 (async () => {
-  timer1.start();
   for(let i = 0; i < 10; i++) {
-    timer2.start();
+    timer.start();
     await wait(200);
-    timer2.stop();
+    timer.stop();
   }
-  timer1.stop();
 
-  console.log(timer1.ms);    // 2020     // Exactly the same year as now!
-  console.log(timer2.ms);    // 202      // Average value
-  console.log(timer1.s);     // 2.02     // As seconds
-  console.log(timer1.us);    // 2020000  // As microseconds
+  console.log(timer.ms);      // 2020     // Exactly the same year as now!
+  console.log(timer.avg.ms);  // 202      // Average value
+  console.log(timer.s);       // 2.02     // As seconds
+  console.log(timer.us);      // 2020000  // As microseconds
 })();
 ```
 
 ### Timer.reset
 ``` js
-const elapsingTime = require('elapsing-time');
+const ElapsingTime = require('elapsing-time');
 
 const wait = ms => new Promise(res => setTimeout(res, ms));
-const timer = new elapsingTime();
+const timer = new ElapsingTime();
 
 (async () => {
-  // Average value
+  // Total value
   timer.start();
   await wait(100);
   timer.stop();
   console.log(timer.ms);  // 100
 
   timer.start();
-  await wait(300);
-  timer.stop();
-  console.log(timer.ms);  // 200
-
-  timer.start();
-  await wait(500);
+  await wait(200);
   timer.stop();
   console.log(timer.ms);  // 300
+
+  timer.start();
+  await wait(300);
+  timer.stop();
+  console.log(timer.ms);  // 600
 
 
   // Now with reset
@@ -64,61 +63,61 @@ const timer = new elapsingTime();
 
   timer.reset();
   timer.start();
-  await wait(300);
+  await wait(200);
   timer.stop();
-  console.log(timer.ms);  // 300
+  console.log(timer.ms);  // 200
 
   timer.reset();
   timer.start();
-  await wait(500);
+  await wait(300);
   timer.stop();
-  console.log(timer.ms);  // 500
+  console.log(timer.ms);  // 300
 })();
 ```
 
 ### Timer.start with autoreset
 ``` js
-const elapsingTime = require('elapsing-time');
+const ElapsingTime = require('elapsing-time');
 
 const wait = ms => new Promise(res => setTimeout(res, ms));
-const timer = new elapsingTime();
+const timer = new ElapsingTime();
 
 (async () => {
   timer.start();
   await wait(100);
-  timer.stop(true);   // The next timer.start will invoke timer.reset
+  timer.stop(true);   // The next timer.start will invoke timer.reset under the hood
   console.log(timer.ms);  // 100
 
   timer.start();
-  await wait(300);
+  await wait(200);
   timer.stop(true);
-  console.log(timer.ms);  // 300
+  console.log(timer.ms);  // 200
 
   timer.start();
-  await wait(500);
+  await wait(300);
   timer.stop();
-  console.log(timer.ms);  // 500
+  console.log(timer.ms);  // 300
 })();
 ```
 
-### Built in print functions
+### Built-in print functions
 ``` js
-const elapsingTime = require('elapsing-time');
+const ElapsingTime = require('elapsing-time');
 
 const wait = ms => new Promise(res => setTimeout(res, ms));
-const timer = new elapsingTime();
+const timer = new ElapsingTime();
 (async () => {
   timer.start();
   await wait(100);
 
-  timer.msPrint();  // "Time: 103 ms"
+  timer.msPrint();  // Time: 103 ms
   await wait(10);
   // There is no timer.stop so it's still counting
-  timer.sPrint();  // "Time: 0.116 s"
+  timer.sPrint();  // Time: 0.116 s
   await wait(10);
-  timer.usPrint();  // "Time: 127000 us"
+  timer.usPrint();  // Time: 127000 us
   await wait(10);
-  timer.msPrint('Custom label');  // "Custom label: 142 ms"
+  timer.msPrint('Custom label');  // Custom label: 142 ms
 })();
 ```
 
