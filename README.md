@@ -118,7 +118,10 @@ const ElapsingTime = require('elapsing-time');
   timer.msPrint('Custom label');  // Custom label: 142 ms
 })();
 ```
-### The same way "avg" print functions are also present: sAvgPrint, msAvgPrint and usAvgPrint
+The same way "avg" print functions are also present as:
+ - timer.sAvgPrint
+ - timer.msAvgPrint
+ - timer.usAvgPrint
 
 ### Time counts as integer milliseconds. Each value such as *s*, *ms* and *us* has 0.001 precision.
 
@@ -126,4 +129,5 @@ const ElapsingTime = require('elapsing-time');
 No testing functionality provided.
 
 ---
+
 Your improve suggestions and bug reports are welcome any time.
