@@ -1,11 +1,17 @@
-# elapsing-time
+# elapsing-time@2.0.3
+
+[![Dependency status](https://img.shields.io/librariesio/release/npm/elapsing-time/2.0.3)](https://libraries.io/npm/elapsing-time/2.0.3)
+[![Known vulnerabilities](https://snyk.io/test/npm/elapsing-time/2.0.3/badge.svg)](https://snyk.io/test/npm/elapsing-time/2.0.3)
+[![Install size](https://packagephobia.now.sh/badge?p=elapsing-time@2.0.3)](https://packagephobia.now.sh/result?p=elapsing-time@2.0.3)
+[![Version](https://img.shields.io/badge/npm-v2.0.3-blue.svg)](https://www.npmjs.com/package/elapsing-time/v/2.0.3)
+[![Total downloads](https://img.shields.io/npm/dt/elapsing-time?label=total%20downloads)](https://www.npmjs.com/package/elapsing-time)
 
 Helps you to measure the runtime of your code.
 
 ## Installation
 `elapsing-time` is available via npm:
 ``` bash
-$ npm i elapsing-time
+$ npm i elapsing-time@2.0.3
 ```
 
 ## Usage
@@ -119,9 +125,9 @@ const ElapsingTime = require('elapsing-time');
 })();
 ```
 The same way "avg" print functions are also present as:
- - timer.sAvgPrint
- - timer.msAvgPrint
- - timer.usAvgPrint
+- timer.sAvgPrint
+- timer.msAvgPrint
+- timer.usAvgPrint
 
 ### Time counts as integer milliseconds. Each value such as *s*, *ms* and *us* has 0.001 precision.
 
