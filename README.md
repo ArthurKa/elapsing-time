@@ -1,17 +1,17 @@
-[![All dependencies](https://img.shields.io/librariesio/release/npm/elapsing-time/2.0.5?label=all%20dependencies)](https://libraries.io/npm/elapsing-time/2.0.5)
-[![Known vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/elapsing-time@2.0.5?label=known%20vulnerabilities)](https://snyk.io/test/npm/elapsing-time/2.0.5)
-[![NPM-version](https://img.shields.io/badge/npm-v2.0.5-blue.svg)](https://www.npmjs.com/package/elapsing-time/v/2.0.5)
-[![Install size](https://packagephobia.now.sh/badge?p=elapsing-time@2.0.5)](https://packagephobia.now.sh/result?p=elapsing-time@2.0.5)
+[![All dependencies](https://img.shields.io/librariesio/release/npm/elapsing-time/2.0.6?label=all%20dependencies)](https://libraries.io/npm/elapsing-time/2.0.6)
+[![Known vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/elapsing-time@2.0.6?label=known%20vulnerabilities)](https://snyk.io/test/npm/elapsing-time/2.0.6)
+[![NPM-version](https://img.shields.io/badge/npm-v2.0.6-blue.svg)](https://www.npmjs.com/package/elapsing-time/v/2.0.6)
+[![Install size](https://packagephobia.now.sh/badge?p=elapsing-time@2.0.6)](https://packagephobia.now.sh/result?p=elapsing-time@2.0.6)
 [![Total downloads](https://img.shields.io/npm/dt/elapsing-time?label=total%20downloads)](https://npm-stat.com/charts.html?package=elapsing-time)
 
-# elapsing-time@2.0.5
+# elapsing-time@2.0.6
 
 Helps you to measure the runtime of your code.
 
 ## Installation
 `elapsing-time` is available via npm:
 ``` bash
-$ npm i elapsing-time@2.0.5
+$ npm i elapsing-time@2.0.6
 ```
 
 ## Usage
