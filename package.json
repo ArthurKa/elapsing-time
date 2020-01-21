@@ -1,6 +1,6 @@
 {
   "name": "elapsing-time",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "Measures the runtime of code.",
   "main": "elapsingTime.js",
   "keywords": [
@@ -13,7 +13,10 @@
     "type": "git",
     "url": "git+https://github.com/ArthurKa/elapsing-time.git"
   },
-  "author": "ArthurKa",
+  "author": {
+    "name": "ArthurKa",
+    "email": "arthur.katruk@gmail.com"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ArthurKa/elapsing-time/issues"

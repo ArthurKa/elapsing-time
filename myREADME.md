@@ -8,8 +8,8 @@ Helps you to measure the runtime of your code.
 ``` js
 const ElapsingTime = require('elapsing-time');
 
-const wait = ms => new Promise(res => setTimeout(res, ms));
 const timer = new ElapsingTime();
+const wait = ms => new Promise(res => setTimeout(res, ms));
 
 (async () => {
   for(let i = 0; i < 10; i++) {
@@ -29,8 +29,8 @@ const timer = new ElapsingTime();
 ``` js
 const ElapsingTime = require('elapsing-time');
 
-const wait = ms => new Promise(res => setTimeout(res, ms));
 const timer = new ElapsingTime();
+const wait = ms => new Promise(res => setTimeout(res, ms));
 
 (async () => {
   // Total value
@@ -75,8 +75,8 @@ const timer = new ElapsingTime();
 ``` js
 const ElapsingTime = require('elapsing-time');
 
-const wait = ms => new Promise(res => setTimeout(res, ms));
 const timer = new ElapsingTime();
+const wait = ms => new Promise(res => setTimeout(res, ms));
 
 (async () => {
   timer.start();

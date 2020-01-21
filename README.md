@@ -1,25 +1,25 @@
-[![All dependencies](https://img.shields.io/librariesio/release/npm/elapsing-time/2.0.6?label=all%20dependencies)](https://libraries.io/npm/elapsing-time/2.0.6)
-[![Known vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/elapsing-time@2.0.6?label=known%20vulnerabilities)](https://snyk.io/test/npm/elapsing-time/2.0.6)
-[![NPM-version](https://img.shields.io/badge/npm-v2.0.6-blue.svg)](https://www.npmjs.com/package/elapsing-time/v/2.0.6)
-[![Install size](https://packagephobia.now.sh/badge?p=elapsing-time@2.0.6)](https://packagephobia.now.sh/result?p=elapsing-time@2.0.6)
-[![Total downloads](https://img.shields.io/npm/dt/elapsing-time?label=total%20downloads)](https://npm-stat.com/charts.html?package=elapsing-time)
+[![All dependencies](https://img.shields.io/librariesio/release/npm/elapsing-time/2.0.7?style=flat-square "All dependencies of elapsing-time@2.0.7")](https://libraries.io/npm/elapsing-time/2.0.7)
+[![Reported vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/elapsing-time@2.0.7?style=flat-square "Reported vulnerabilities of elapsing-time@2.0.7")](https://snyk.io/test/npm/elapsing-time/2.0.7)
+[![NPM-version](https://img.shields.io/badge/npm-v2.0.7-blue.svg?style=flat-square "Current NPM-version")](https://www.npmjs.com/package/elapsing-time/v/2.0.7)
+[![Install size](https://flat.badgen.net/packagephobia/install/elapsing-time@2.0.7?label=size 'Install size of elapsing-time@2.0.7')](https://packagephobia.now.sh/result?p=elapsing-time@2.0.7)
+[![Total downloads](https://img.shields.io/npm/dt/elapsing-time?style=flat-square "Total downloads for all the time")](https://npm-stat.com/charts.html?package=elapsing-time)
 
-# elapsing-time@2.0.6
+# elapsing-time@2.0.7
 
 Helps you to measure the runtime of your code.
 
 ## Installation
 `elapsing-time` is available via npm:
 ``` bash
-$ npm i elapsing-time@2.0.6
+$ npm i elapsing-time@2.0.7
 ```
 
 ## Usage
 ``` js
 const ElapsingTime = require('elapsing-time');
 
-const wait = ms => new Promise(res => setTimeout(res, ms));
 const timer = new ElapsingTime();
+const wait = ms => new Promise(res => setTimeout(res, ms));
 
 (async () => {
   for(let i = 0; i < 10; i++) {
@@ -39,8 +39,8 @@ const timer = new ElapsingTime();
 ``` js
 const ElapsingTime = require('elapsing-time');
 
-const wait = ms => new Promise(res => setTimeout(res, ms));
 const timer = new ElapsingTime();
+const wait = ms => new Promise(res => setTimeout(res, ms));
 
 (async () => {
   // Total value
@@ -85,8 +85,8 @@ const timer = new ElapsingTime();
 ``` js
 const ElapsingTime = require('elapsing-time');
 
-const wait = ms => new Promise(res => setTimeout(res, ms));
 const timer = new ElapsingTime();
+const wait = ms => new Promise(res => setTimeout(res, ms));
 
 (async () => {
   timer.start();
