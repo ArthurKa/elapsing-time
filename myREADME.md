@@ -129,7 +129,6 @@ const wait = ms => new Promise(res => setTimeout(res, ms));
   timer.stop();
   timer.avg.sPrint();  // Time: 0.102 s
 
-
   timer.start();
   await wait(900);
   timer.stop();
