@@ -1,10 +1,12 @@
 'use strict';
 
+const { performance } = typeof window !== 'undefined' ? window : require('perf_hooks');
+
 const round = (n, d) => +n.toFixed(d);
 
 function ElapsingTime() {
   if(!new.target) {
-    throw new Error('elapsing-time cannot be invoked without "new"');
+    throw new Error('elapsing-time cannot be invoked without "new" operator');
   }
 
   let time = 0;
@@ -17,12 +19,12 @@ function ElapsingTime() {
       this.reset();
       cachedTime = false;
     }
-    startedTime = Date.now();
+    startedTime = performance.now();
     count++;
   };
   this.stop = (withReset = false) => {
     if(startedTime) {
-      time += Date.now() - startedTime;
+      time += performance.now() - startedTime;
       startedTime = 0;
     }
     if(withReset) {
@@ -39,7 +41,7 @@ function ElapsingTime() {
     us: ms => ms * 1000,
   };
   function get(key, avg = false) {
-    const st = startedTime && Date.now() - startedTime;
+    const st = startedTime && performance.now() - startedTime;
     const t = (time + st) / (avg && count || 1);
     return round(keys[key](t), 3);
   }
@@ -58,9 +60,7 @@ function ElapsingTime() {
   }
   for(const key of Object.keys(keys)) {
     this[`${key}Print`] = printWrapper(this, key);
-  }
-  for(const key of Object.keys(keys)) {
-    this[`${key}AvgPrint`] = printWrapper(this.avg, key);
+    this.avg[`${key}Print`] = printWrapper(this.avg, key);
   }
 }
 
