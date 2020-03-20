@@ -1,6 +1,6 @@
 {
   "name": "elapsing-time",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Measures the runtime of code.",
   "main": "elapsingTime.js",
   "keywords": [

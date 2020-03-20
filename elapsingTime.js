@@ -1,12 +1,14 @@
 'use strict';
 
+const pkg = require('./package.json');
+
 const { performance } = typeof window !== 'undefined' ? window : require('perf_hooks');
 
 const round = (n, d) => +n.toFixed(d);
 
 function ElapsingTime() {
   if(!new.target) {
-    throw new Error('elapsing-time cannot be invoked without "new" operator');
+    throw new Error(`${pkg.name} cannot be invoked without "new" operator`);
   }
 
   let time = 0;

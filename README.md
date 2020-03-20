@@ -1,17 +1,17 @@
-[![All dependencies](https://img.shields.io/librariesio/release/npm/elapsing-time/3.0.2?style=flat-square "All dependencies of elapsing-time@3.0.2")](https://libraries.io/npm/elapsing-time/3.0.2)
-[![Reported vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/elapsing-time@3.0.2?style=flat-square "Reported vulnerabilities of elapsing-time@3.0.2")](https://snyk.io/test/npm/elapsing-time/3.0.2)
-[![NPM-version](https://img.shields.io/badge/npm-v3.0.2-blue.svg?style=flat-square&&logo=npm "Current NPM-version")](https://www.npmjs.com/package/elapsing-time/v/3.0.2)
-[![Install size](https://flat.badgen.net/packagephobia/install/elapsing-time@3.0.2?label=size 'Install size of elapsing-time@3.0.2')](https://packagephobia.now.sh/result?p=elapsing-time@3.0.2)
+[![All dependencies](https://img.shields.io/librariesio/release/npm/elapsing-time/3.0.3?style=flat-square "All dependencies of elapsing-time@3.0.3")](https://libraries.io/npm/elapsing-time/3.0.3)
+[![Reported vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/elapsing-time@3.0.3?style=flat-square "Reported vulnerabilities of elapsing-time@3.0.3")](https://snyk.io/test/npm/elapsing-time/3.0.3)
+[![NPM-version](https://img.shields.io/badge/npm-v3.0.3-blue.svg?style=flat-square&&logo=npm "Current NPM-version")](https://www.npmjs.com/package/elapsing-time/v/3.0.3)
+[![Install size](https://flat.badgen.net/packagephobia/install/elapsing-time@3.0.3?label=size 'Install size of elapsing-time@3.0.3')](https://packagephobia.now.sh/result?p=elapsing-time@3.0.3)
 [![Total downloads](https://img.shields.io/npm/dt/elapsing-time?style=flat-square "Total downloads for all the time")](https://npm-stat.com/charts.html?package=elapsing-time)
 
-# elapsing-time@3.0.2
+# elapsing-time@3.0.3
 
 Helps you to measure the runtime of your code. Package is available both for browser and for Node.js. Time counts with help of **performance.now** function.
 
 ## Installation
 `elapsing-time` is available via npm:
 ``` bash
-$ npm i elapsing-time@3.0.2
+$ npm i elapsing-time@3.0.3
 ```
 
 ## Usage
