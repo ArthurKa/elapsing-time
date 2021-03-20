@@ -1,15 +1,15 @@
 <header>
 
-Helps you to measure the runtime of your code. Package is available both for browser and for Node.js. Time counts with help of **performance.now** function.
+Helps you to measure the runtime of your code. Package is available both for **browser** and **Node.js**. Time counts with help of **performance.now** function.
 
 <installation>
 
 ## Usage
-``` js
-const ElapsingTime = require('.');
+```js
+import ElapsingTime from './elapsing-time';
 
 const timer = new ElapsingTime();
-const wait = ms => new Promise(res => setTimeout(res, ms));
+const wait = (ms: number) => new Promise(res => setTimeout(res, ms));
 
 (async () => {
   for(let i = 0; i < 10; i++) {
@@ -19,18 +19,18 @@ const wait = ms => new Promise(res => setTimeout(res, ms));
   }
 
   console.log(timer.ms);      // 2002.329
-  console.log(timer.avg.ms);  // 200.233      // Average value
   console.log(timer.s);       // 2.002        // As seconds
   console.log(timer.us);      // 2001809.967  // As microseconds
+  console.log(timer.avg.ms);  // 200.233      // Average value
 })();
 ```
 
 ### Timer.reset
-``` js
-const ElapsingTime = require('.');
+```js
+import ElapsingTime from './elapsing-time';
 
 const timer = new ElapsingTime();
-const wait = ms => new Promise(res => setTimeout(res, ms));
+const wait = (ms: number) => new Promise(res => setTimeout(res, ms));
 
 (async () => {
   // Total value
@@ -71,11 +71,11 @@ const wait = ms => new Promise(res => setTimeout(res, ms));
 ```
 
 ### Timer.start with autoreset
-``` js
-const ElapsingTime = require('.');
+```js
+import ElapsingTime from './elapsing-time';
 
 const timer = new ElapsingTime();
-const wait = ms => new Promise(res => setTimeout(res, ms));
+const wait = (ms: number) => new Promise(res => setTimeout(res, ms));
 
 (async () => {
   timer.start();
@@ -96,11 +96,11 @@ const wait = ms => new Promise(res => setTimeout(res, ms));
 ```
 
 ### Built-in print functions
-``` js
-const ElapsingTime = require('.');
+```js
+import ElapsingTime from './elapsing-time';
 
 const timer = new ElapsingTime();
-const wait = ms => new Promise(res => setTimeout(res, ms));
+const wait = (ms: number) => new Promise(res => setTimeout(res, ms));
 
 (async () => {
   timer.start();
@@ -116,12 +116,13 @@ const wait = ms => new Promise(res => setTimeout(res, ms));
   timer.msPrint('Custom label');  // Custom label: 134.661 ms
 })();
 ```
+
 The same way "avg" print functions are also present in timer.avg:
-``` js
-const ElapsingTime = require('.');
+```ts
+import ElapsingTime from './elapsing-time';
 
 const timer = new ElapsingTime();
-const wait = ms => new Promise(res => setTimeout(res, ms));
+const wait = (ms: number) => new Promise(res => setTimeout(res, ms));
 
 (async () => {
   timer.start();
