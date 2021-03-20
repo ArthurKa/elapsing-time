@@ -1,26 +1,26 @@
-[![All dependencies](https://img.shields.io/librariesio/release/npm/elapsing-time/3.1.1?style=flat-square "All dependencies of elapsing-time@3.1.1")](https://libraries.io/npm/elapsing-time/3.1.1)
-[![Reported vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/elapsing-time@3.1.1?style=flat-square "Reported vulnerabilities of elapsing-time@3.1.1")](https://snyk.io/test/npm/elapsing-time/3.1.1)
+[![All dependencies](https://img.shields.io/librariesio/release/npm/elapsing-time/3.1.2?style=flat-square "All dependencies of elapsing-time@3.1.2")](https://libraries.io/npm/elapsing-time/3.1.2)
+[![Reported vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/elapsing-time@3.1.2?style=flat-square "Reported vulnerabilities of elapsing-time@3.1.2")](https://snyk.io/test/npm/elapsing-time/3.1.2)
 [![Commits](https://flat.badgen.net/github/commits/ArthurKa/elapsing-time)](https://github.com/ArthurKa/elapsing-time/commits/master)
-[![NPM-version](https://img.shields.io/badge/npm-v3.1.1-blue.svg?style=flat-square&&logo=npm "Current NPM-version")](https://www.npmjs.com/package/elapsing-time/v/3.1.1)
+[![NPM-version](https://img.shields.io/badge/npm-v3.1.2-blue.svg?style=flat-square&&logo=npm "Current NPM-version")](https://www.npmjs.com/package/elapsing-time/v/3.1.2)
 [![Total downloads](https://img.shields.io/npm/dt/elapsing-time?style=flat-square "Total downloads for all the time")](https://npm-stat.com/charts.html?package=elapsing-time)
 [![Developed by](https://img.shields.io/badge/developed_by-ArthurKa-blueviolet.svg?style=flat-square "Have any questions? You are always welcome.")](https://github.com/ArthurKa/elapsing-time/issues)\
-[![Publish size](https://flat.badgen.net/packagephobia/publish/elapsing-time@3.1.1?label=publish 'Publish size of elapsing-time@3.1.1')](https://packagephobia.now.sh/result?p=elapsing-time@3.1.1)
-[![Install size](https://flat.badgen.net/packagephobia/install/elapsing-time@3.1.1?label=install 'Install size of elapsing-time@3.1.1')](https://packagephobia.now.sh/result?p=elapsing-time@3.1.1)
-[![Minified size](https://img.shields.io/bundlephobia/min/elapsing-time@3.1.1?style=flat-square&label=minified "Minified size of elapsing-time@3.1.1")](https://bundlephobia.com/result?p=elapsing-time@3.1.1)
-[![Minified + gzipped size](https://img.shields.io/bundlephobia/minzip/elapsing-time@3.1.1?style=flat-square&label=minzipped "Minified + gzipped size of elapsing-time@3.1.1")](https://bundlephobia.com/result?p=elapsing-time@3.1.1)
+[![Publish size](https://flat.badgen.net/packagephobia/publish/elapsing-time@3.1.2?label=publish 'Publish size of elapsing-time@3.1.2')](https://packagephobia.now.sh/result?p=elapsing-time@3.1.2)
+[![Install size](https://flat.badgen.net/packagephobia/install/elapsing-time@3.1.2?label=install 'Install size of elapsing-time@3.1.2')](https://packagephobia.now.sh/result?p=elapsing-time@3.1.2)
+[![Minified size](https://img.shields.io/bundlephobia/min/elapsing-time@3.1.2?style=flat-square&label=minified "Minified size of elapsing-time@3.1.2")](https://bundlephobia.com/result?p=elapsing-time@3.1.2)
+[![Minified + gzipped size](https://img.shields.io/bundlephobia/minzip/elapsing-time@3.1.2?style=flat-square&label=minzipped "Minified + gzipped size of elapsing-time@3.1.2")](https://bundlephobia.com/result?p=elapsing-time@3.1.2)
 
-# elapsing-time@3.1.1
+# elapsing-time@3.1.2
 
 Helps you to measure the runtime of your code. Package is available both for **browser** and **Node.js**. Time counts with help of **performance.now** function.
 
 ## Installation
 `elapsing-time` is available via npm:
 ``` bash
-$ npm i elapsing-time@3.1.1
+$ npm i elapsing-time@3.1.2
 ```
 
 ## Usage
-```js
+```ts
 import ElapsingTime from 'elapsing-time';
 
 const timer = new ElapsingTime();
@@ -41,7 +41,7 @@ const wait = (ms: number) => new Promise(res => setTimeout(res, ms));
 ```
 
 ### Timer.reset
-```js
+```ts
 import ElapsingTime from 'elapsing-time';
 
 const timer = new ElapsingTime();
@@ -86,7 +86,7 @@ const wait = (ms: number) => new Promise(res => setTimeout(res, ms));
 ```
 
 ### Timer.start with autoreset
-```js
+```ts
 import ElapsingTime from 'elapsing-time';
 
 const timer = new ElapsingTime();
@@ -111,7 +111,7 @@ const wait = (ms: number) => new Promise(res => setTimeout(res, ms));
 ```
 
 ### Built-in print functions
-```js
+```ts
 import ElapsingTime from 'elapsing-time';
 
 const timer = new ElapsingTime();
@@ -158,7 +158,7 @@ const wait = (ms: number) => new Promise(res => setTimeout(res, ms));
 ```
 
 ## Testing
-No testing functionality provided.
+Manually tested by developer. Automated tests is not provided.
 
 ---
 

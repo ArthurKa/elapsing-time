@@ -5,7 +5,7 @@ Helps you to measure the runtime of your code. Package is available both for **b
 <installation>
 
 ## Usage
-```js
+```ts
 import ElapsingTime from './elapsing-time';
 
 const timer = new ElapsingTime();
@@ -26,7 +26,7 @@ const wait = (ms: number) => new Promise(res => setTimeout(res, ms));
 ```
 
 ### Timer.reset
-```js
+```ts
 import ElapsingTime from './elapsing-time';
 
 const timer = new ElapsingTime();
@@ -71,7 +71,7 @@ const wait = (ms: number) => new Promise(res => setTimeout(res, ms));
 ```
 
 ### Timer.start with autoreset
-```js
+```ts
 import ElapsingTime from './elapsing-time';
 
 const timer = new ElapsingTime();
@@ -96,7 +96,7 @@ const wait = (ms: number) => new Promise(res => setTimeout(res, ms));
 ```
 
 ### Built-in print functions
-```js
+```ts
 import ElapsingTime from './elapsing-time';
 
 const timer = new ElapsingTime();
