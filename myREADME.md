@@ -6,10 +6,10 @@ Helps you to measure the runtime of your code. Package is available both for **b
 
 ## Usage
 ```ts
-import ElapsingTime from './elapsing-time';
+import ElapsingTime from './elapsing-time/src';
 
 const timer = new ElapsingTime();
-const wait = (ms: number) => new Promise(res => setTimeout(res, ms));
+const wait = (ms: number) => new Promise<void>(res => setTimeout(res, ms));
 
 (async () => {
   for(let i = 0; i < 10; i++) {
@@ -27,10 +27,10 @@ const wait = (ms: number) => new Promise(res => setTimeout(res, ms));
 
 ### Timer.reset
 ```ts
-import ElapsingTime from './elapsing-time';
+import ElapsingTime from './elapsing-time/src';
 
 const timer = new ElapsingTime();
-const wait = (ms: number) => new Promise(res => setTimeout(res, ms));
+const wait = (ms: number) => new Promise<void>(res => setTimeout(res, ms));
 
 (async () => {
   // Total value
@@ -72,10 +72,10 @@ const wait = (ms: number) => new Promise(res => setTimeout(res, ms));
 
 ### Timer.start with autoreset
 ```ts
-import ElapsingTime from './elapsing-time';
+import ElapsingTime from './elapsing-time/src';
 
 const timer = new ElapsingTime();
-const wait = (ms: number) => new Promise(res => setTimeout(res, ms));
+const wait = (ms: number) => new Promise<void>(res => setTimeout(res, ms));
 
 (async () => {
   timer.start();
@@ -97,10 +97,10 @@ const wait = (ms: number) => new Promise(res => setTimeout(res, ms));
 
 ### Built-in print functions
 ```ts
-import ElapsingTime from './elapsing-time';
+import ElapsingTime from './elapsing-time/src';
 
 const timer = new ElapsingTime();
-const wait = (ms: number) => new Promise(res => setTimeout(res, ms));
+const wait = (ms: number) => new Promise<void>(res => setTimeout(res, ms));
 
 (async () => {
   timer.start();
@@ -119,10 +119,10 @@ const wait = (ms: number) => new Promise(res => setTimeout(res, ms));
 
 The same way "avg" print functions are also present in timer.avg:
 ```ts
-import ElapsingTime from './elapsing-time';
+import ElapsingTime from './elapsing-time/src';
 
 const timer = new ElapsingTime();
-const wait = (ms: number) => new Promise(res => setTimeout(res, ms));
+const wait = (ms: number) => new Promise<void>(res => setTimeout(res, ms));
 
 (async () => {
   timer.start();

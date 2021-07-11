@@ -25,7 +25,7 @@ const keys: Record<TimeMeasurementKeys, (ms: number) => number> = {
   us: wrapMultiplier(1000),
 };
 
-const ElapsingTime = function() {
+function ElapsingTime() {
   let time = 0;
   let count = 0;
   let startedTime = 0;
@@ -78,6 +78,6 @@ const ElapsingTime = function() {
   }
 
   return res;
-} as any as new () => IElapsingTime;
+}
 
-export default ElapsingTime;
+export default ElapsingTime as any as new (...params: Parameters<typeof ElapsingTime>) => ReturnType<typeof ElapsingTime>;
