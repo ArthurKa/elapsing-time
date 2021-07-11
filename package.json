@@ -1,6 +1,6 @@
 {
   "name": "elapsing-time",
-  "version": "3.1.2",
+  "version": "3.2.0",
   "description": "Measures the runtime of code.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
